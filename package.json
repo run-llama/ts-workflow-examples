@@ -2,7 +2,12 @@
   "type": "module",
   "dependencies": {
     "@llama-flow/core": "^0.3.4",
+    "@llamaindex/anthropic": "^0.3.3",
+    "@llamaindex/huggingface": "^0.1.6",
+    "@llamaindex/readers": "^3.0.2",
+    "dotenv": "^16.5.0",
     "llamaindex": "^0.10.2",
-    "tsx": "^4.19.3"
+    "tsx": "^4.19.3",
+    "zod": "^3.24.3"
   }
 }

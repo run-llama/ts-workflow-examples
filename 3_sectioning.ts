@@ -7,15 +7,9 @@ import { pipeline } from "node:stream/promises";
 ////////// define the workflow
 
 const startEvent = workflowEvent<string>();
-const branchAEvent = workflowEvent<string>({
-  type: "branchA"
-});
-const branchBEvent = workflowEvent<string>({
-  type: "branchB"
-});
-const branchCEvent = workflowEvent<string>({
-  type: "branchC"
-});
+const branchAEvent = workflowEvent<string>();
+const branchBEvent = workflowEvent<string>();
+const branchCEvent = workflowEvent<string>();
 const branchCompleteEvent = workflowEvent<string>();
 const allCompleteEvent = workflowEvent<string>();
 const stopEvent = workflowEvent<string>();
@@ -42,7 +36,7 @@ workflow.handle([startEvent], async (start) => {
   );
 
   console.log(`All branches completed`);
-  console.log(results)
+  console.log(results[0].data)
   return allCompleteEvent.with(results.join(", "));
 });
 

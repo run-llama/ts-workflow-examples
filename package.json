@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@llama-flow/core": "^0.3.4",
+    "llamaindex": "^0.10.2",
+    "tsx": "^4.19.3"
+  }
+}

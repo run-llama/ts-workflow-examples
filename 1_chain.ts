@@ -1,5 +1,4 @@
-import { createWorkflow } from "@llama-flow/core";
-import { workflowEvent } from "@llama-flow/core";
+import { createWorkflow, workflowEvent } from "@llama-flow/core";
 import { pipeline } from "node:stream/promises";
 
 ////////// define the workflow
@@ -32,7 +31,7 @@ sendEvent(startEvent.with("I am some data"));
 // Process the stream to get the result
 const result = await pipeline(stream, async function (source) {
     for await (const event of source) {
-        console.log(`Event: ${event.data}`);
+        console.log(`Event: ${event} ${event.data}`);
         if (stopEvent.include(event)) {
             return `Result: ${event.data}`;
         }

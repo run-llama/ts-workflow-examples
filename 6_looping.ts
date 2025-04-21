@@ -7,7 +7,6 @@ const startEvent = workflowEvent<string>();
 const stepAEvent = workflowEvent<string>();
 const stepBEvent = workflowEvent<string>();
 const stepCEvent = workflowEvent<string>();
-const loopEvent = workflowEvent<string>();
 const stopEvent = workflowEvent<string>();
 
 const workflow = createWorkflow();

@@ -6,7 +6,6 @@ import { pipeline } from "node:stream/promises";
 import { Anthropic } from "@llamaindex/anthropic";
 import {
     agent,
-    AgentStream,
     tool,
     Settings,
 } from "llamaindex";

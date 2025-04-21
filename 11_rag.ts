@@ -8,7 +8,6 @@ import {
     agent,
     tool,
     Settings,
-    QueryEngineTool,
     VectorStoreIndex,
 } from "llamaindex";
 import { HuggingFaceEmbedding } from "@llamaindex/huggingface";
